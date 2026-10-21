@@ -35,8 +35,8 @@ VALUES
 INSERT INTO CustosFixos (custo, estimativa_custo)  
 VALUES  
 ('Aluguel', NULL), 
-('Wi-Fi', 100.00),  
-('Luz', 100.00),  
+('Wi-Fi', 100.0),  
+('Luz', 100.0),  
 ('Domínio', 3.33),  
 ('TV a cabo', 11.59);  
 
