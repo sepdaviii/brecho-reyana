@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Brech&oacute; Reyana | Painel interno
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="app">
+   <aside class="menu-lateral" id="sidebar">
+
+    <div class="brand">
+        <div class="logo-abelha">
+        <div class="fundo-abelha">
+     <div class="logo-letra">
+      <img src="images/Reyana-logo.png" alt="logo-reyana">
+    </div>
+    </div>
+     </div>
+
+     <div>
+      <div class="nome-loja">
+       Brech&oacute; Reyana
+      </div>
+
+      <small>
+       Gest&atilde;o interna
+      </small>
+     </div>
+    </div>
+
+    <div class="titulo-menu">
+     Menu principal
+    </div>
+
+    <nav class="nav">
+     <button class="active" data-page="dashboard">
+      <span class="ico">
+       ⌂
+      </span>
+      Vis&atilde;o geral
+     </button>
+
+     <button data-page="estoque">
+      <span class="ico">
+       ▤
+      </span>
+      Estoque
+     </button>
+
+     <button data-page="vendas">
+      <span class="ico">
+       &nearrow;
+      </span>
+      Vendas
+     </button>
+
+     <button data-page="financeiro">
+      <span class="ico">
+       ◷
+      </span>
+      Financeiro
+     </button>
+
+     <button data-page="relatorios">
+      <span class="ico">
+       ▥
+      </span>
+      Relat&oacute;rios
+     </button>
+    </nav>
+
+    <div class="titulo-menu">
+     Sistema
+    </div>
+
+    <nav class="nav">
+     <button data-page="configuracoes">
+      <span class="ico">
+       ⚙
+      </span>
+      Configura&ccedil;&otilde;es
+     </button>
+    </nav>
+
+    <div class="usuario-menu">
+     <div class="foto-usuario">
+      BR
+     </div>
+     <div>
+      <strong>
+       Administra&ccedil;&atilde;o
+      </strong>
+      <small>
+       Painel da empresa
+      </small>
+     </div>
+    </div>
+   </aside>
+
+   <main class="main">
+    <header class="barra-superior">
+     <div style="display:flex;align-items:center;gap:14px">
+      <button aria-label="Abrir menu" class="btn botao-menu" id="menuBtn">
+       ☰
+      </button>
+      <div class="caminho-pagina">
+       Brech&oacute; Reyana
+       <span style="color:#c8b9ac">
+        /
+       </span>
+       <strong id="breadcrumb">
+        Vis&atilde;o geral
+       </strong>
+      </div>
+     </div>
+
+     <div class="acoes-topo">
+      <span class="date" id="today">
+      </span>
+      <div class="foto-usuario" style="width:32px;height:32px;font-size:12px">
+       BR
+      </div>
+     </div>
+    </header>
+    <div class="content">
+     <section class="page" id="dashboardPage">
+      <div class="cabecalho-pagina">
+       <div>
+        <div class="subtitulo">
+         Quinta-feira &middot; painel administrativo
+        </div>
+        <h1>
+         Bom te ver por aqui.
+        </h1>
+        <p>
+         Acompanhe o que est&aacute; acontecendo no seu brech&oacute; hoje.
+        </p>
+       </div>
+       <button class="btn primary" id="quickSale">
+        ＋ Registrar venda
+       </button>
+      </div>
+      <div class="resumos">
+       <div class="stat">
+        <div class="resumo-topo">
+         <span>
+          Vendas do m&ecirc;s
+         </span>
+         <span class="resumo-icone">
+          &nearrow;
+         </span>
+        </div>
+        <div class="resumo-valor" id="monthSales">
+         R$ 4.280,00
+        </div>
+        <div class="resumo-rodape">
+         <span class="positivo">
+          &uarr; 12%
+         </span>
+         em rela&ccedil;&atilde;o ao m&ecirc;s anterior
+        </div>
+       </div>
+       <div class="stat">
+        <div class="resumo-topo">
+         <span>
+          Pe&ccedil;as em estoque
+         </span>
+         <span class="resumo-icone">
+          ▤
+         </span>
+        </div>
+        <div class="resumo-valor" id="stockCount">
+         248
+        </div>
+        <div class="resumo-rodape">
+         Pe&ccedil;as dispon&iacute;veis para venda
+        </div>
+       </div>
+       <div class="stat">
+        <div class="resumo-topo">
+         <span>
+          Vendas hoje
+         </span>
+         <span class="resumo-icone">
+          ◷
+         </span>
+        </div>
+        <div class="resumo-valor" id="todaySales">
+         R$ 186,00
+        </div>
+        <div class="resumo-rodape">
+         3 vendas registradas hoje
+        </div>
+       </div>
+       <div class="stat">
+        <div class="resumo-topo">
+         <span>
+          Estoque baixo
+         </span>
+         <span class="resumo-icone">
+          !
+         </span>
+        </div>
+        <div class="resumo-valor" id="lowCount">
+         5 itens
+        </div>
+        <div class="resumo-rodape">
+         Vale conferir esses produtos
+        </div>
+       </div>
+      </div>
+      <div class="paineis">
+       <div class="panel">
+        <div class="cabecalho-bloco">
+         <div>
+          <h2>
+           Resumo de vendas
+          </h2>
+          <div class="descricao-bloco">
+           Desempenho ilustrativo dos &uacute;ltimos 7 dias
+          </div>
+         </div>
+         <span class="legend">
+          <i class="ponto-legenda">
+          </i>
+          Vendas
+         </span>
+        </div>
+        <div class="chart" id="salesChart">
+        </div>
+       </div>
+       <div class="panel">
+        <div class="cabecalho-bloco">
+         <div>
+          <h2>
+           Atividade recente
+          </h2>
+          <div class="descricao-bloco">
+           &Uacute;ltimas movimenta&ccedil;&otilde;es registradas
+          </div>
+         </div>
+         <button class="link-texto" data-goto="vendas">
+          Ver vendas &rarr;
+         </button>
+        </div>
+        <div class="activity" id="activityList">
+        </div>
+       </div>
+      </div>
+      <div class="grade-inferior">
+       <div class="panel">
+        <div class="cabecalho-bloco">
+         <div>
+          <h2>
+           Estoque para conferir
+          </h2>
+          <div class="descricao-bloco">
+           Produtos com poucas unidades
+          </div>
+         </div>
+         <button class="link-texto" data-goto="estoque">
+          Ver estoque &rarr;
+         </button>
+        </div>
+        <div class="tabela-container">
+         <table>
+          <thead>
+           <tr>
+            <th>
+             Produto
+            </th>
+            <th>
+             Qtd.
+            </th>
+            <th>
+             Status
+            </th>
+           </tr>
+          </thead>
+          <tbody id="lowStockTable">
+          </tbody>
+         </table>
+        </div>
+       </div>
+       <div class="panel">
+        <div class="cabecalho-bloco">
+         <div>
+          <h2>
+           Acesso r&aacute;pido
+          </h2>
+          <div class="descricao-bloco">
+           Tarefas comuns do dia a dia
+          </div>
+         </div>
+        </div>
+        <div style="display:grid;gap:10px">
+         <button class="btn" data-goto="estoque" style="justify-content:flex-start;padding:14px">
+          ＋
+          <span>
+           <b>
+            Cadastrar pe&ccedil;a
+           </b>
+           <br/>
+           <small style="color:var(--muted);font-weight:400">
+            Adicionar produto ao estoque
+           </small>
+          </span>
+         </button>
+         <button class="btn" data-goto="vendas" style="justify-content:flex-start;padding:14px">
+          &nearrow;
+          <span>
+           <b>
+            Registrar uma venda
+           </b>
+           <br/>
+           <small style="color:var(--muted);font-weight:400">
+            Atualizar as sa&iacute;das de pe&ccedil;as
+           </small>
+          </span>
+         </button>
+         <button class="btn" data-goto="relatorios" style="justify-content:flex-start;padding:14px">
+          ▥
+          <span>
+           <b>
+            Ver relat&oacute;rios
+           </b>
+           <br/>
+           <small style="color:var(--muted);font-weight:400">
+            Acompanhar os resultados
+           </small>
+          </span>
+         </button>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class="page hidden" id="estoquePage">
+      <div class="cabecalho-pagina">
+       <div>
+        <div class="subtitulo">
+         Produtos
+        </div>
+        <h1>
+         Controle de estoque
+        </h1>
+        <p>
+         Cadastre pe&ccedil;as e acompanhe o que est&aacute; dispon&iacute;vel.
+        </p>
+       </div>
+       <button class="btn primary" id="addProduct">
+        ＋ Cadastrar pe&ccedil;a
+       </button>
+      </div>
+      <div class="resumos-pequenos">
+       <div class="resumo-pequeno">
+        <span>
+         Total de pe&ccedil;as
+        </span>
+        <strong id="inventoryTotal">
+         248
+        </strong>
+       </div>
+       <div class="resumo-pequeno">
+        <span>
+         Produtos cadastrados
+        </span>
+        <strong id="productTotal">
+         8
+        </strong>
+       </div>
+       <div class="resumo-pequeno">
+        <span>
+         Precisam de reposi&ccedil;&atilde;o
+        </span>
+        <strong id="inventoryLow">
+         5
+        </strong>
+       </div>
+      </div>
+      <div class="panel">
+       <div class="linha-busca">
+        <div class="search">
+         <input aria-label="Buscar produto" id="productSearch" placeholder="Buscar por nome ou c&oacute;digo..."/>
+        </div>
+        <select class="select" id="categoryFilter">
+         <option value="">
+          Todas as categorias
+         </option>
+         <option>
+          Blusas
+         </option>
+         <option>
+          Cal&ccedil;as
+         </option>
+         <option>
+          Vestidos
+         </option>
+         <option>
+          Casacos
+         </option>
+         <option>
+          Cal&ccedil;ados
+         </option>
+         <option>
+          Acess&oacute;rios
+         </option>
+        </select>
+        <select class="select" id="stockFilter">
+         <option value="">
+          Todos os status
+         </option>
+         <option value="low">
+          Estoque baixo
+         </option>
+         <option value="ok">
+          Dispon&iacute;vel
+         </option>
+        </select>
+       </div>
+       <div class="tabela-container">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Produto
+           </th>
+           <th>
+            Categoria
+           </th>
+           <th>
+            Tamanho
+           </th>
+           <th>
+            Pre&ccedil;o
+           </th>
+           <th>
+            Quantidade
+           </th>
+           <th>
+            Status
+           </th>
+           <th>
+            A&ccedil;&atilde;o
+           </th>
+          </tr>
+         </thead>
+         <tbody id="inventoryTable">
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </section>
+     <section class="page hidden" id="vendasPage">
+      <div class="cabecalho-pagina">
+       <div>
+        <div class="subtitulo">
+         Movimenta&ccedil;&otilde;es
+        </div>
+        <h1>
+         Vendas
+        </h1>
+        <p>
+         Registre as vendas realizadas e mantenha o estoque atualizado.
+        </p>
+       </div>
+       <button class="btn primary" id="addSale">
+        ＋ Registrar venda
+       </button>
+      </div>
+      <div class="aviso-secao">
+       Os registros abaixo s&atilde;o exemplos para demonstrar o funcionamento do prot&oacute;tipo. Substitua-os pelos dados reais da empresa quando integrar um banco de dados.
+      </div>
+      <div class="resumos">
+       <div class="stat">
+        <div class="resumo-topo">
+         Vendas registradas
+        </div>
+        <div class="resumo-valor" id="salesQty">
+         12
+        </div>
+        <div class="resumo-rodape">
+         Neste prot&oacute;tipo
+        </div>
+       </div>
+       <div class="stat">
+        <div class="resumo-topo">
+         Total vendido
+        </div>
+        <div class="resumo-valor" id="salesSum">
+         R$ 1.248,00
+        </div>
+        <div class="resumo-rodape">
+         Soma dos registros de exemplo
+        </div>
+       </div>
+      </div>
+      <div class="panel">
+       <div class="linha-busca">
+        <div class="search">
+         <input id="saleSearch" placeholder="Buscar venda por produto..."/>
+        </div>
+       </div>
+       <div class="tabela-container">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Data
+           </th>
+           <th>
+            Produto
+           </th>
+           <th>
+            Quantidade
+           </th>
+           <th>
+            Pagamento
+           </th>
+           <th>
+            Total
+           </th>
+          </tr>
+         </thead>
+         <tbody id="salesTable">
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </section>
+     <section class="page hidden" id="financeiroPage">
+      <div class="cabecalho-pagina">
+       <div>
+        <div class="subtitulo">
+         Entradas e sa&iacute;das
+        </div>
+        <h1>
+         Financeiro
+        </h1>
+        <p>
+         Uma vis&atilde;o simples do movimento financeiro da empresa.
+        </p>
+       </div>
+       <button class="btn primary" id="addExpense">
+        ＋ Registrar despesa
+       </button>
+      </div>
+      <div class="resumos">
+       <div class="stat">
+        <div class="resumo-topo">
+         Entradas
+        </div>
+        <div class="resumo-valor" id="finIncome">
+         R$ 4.280,00
+        </div>
+        <div class="resumo-rodape">
+         Vendas do m&ecirc;s (exemplo)
+        </div>
+       </div>
+       <div class="stat">
+        <div class="resumo-topo">
+         Despesas
+        </div>
+        <div class="resumo-valor" id="finExpenses">
+         R$ 1.150,00
+        </div>
+        <div class="resumo-rodape">
+         Despesas de exemplo
+        </div>
+       </div>
+       <div class="stat">
+        <div class="resumo-topo">
+         Saldo estimado
+        </div>
+        <div class="resumo-valor" id="finBalance">
+         R$ 3.130,00
+        </div>
+        <div class="resumo-rodape">
+         Entradas menos despesas
+        </div>
+       </div>
+      </div>
+      <div class="panel">
+       <div class="cabecalho-bloco">
+        <div>
+         <h2>
+          Despesas recentes
+         </h2>
+         <div class="descricao-bloco">
+          Registros adicionados nesta sess&atilde;o
+         </div>
+        </div>
+       </div>
+       <div class="tabela-container">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Descri&ccedil;&atilde;o
+           </th>
+           <th>
+            Categoria
+           </th>
+           <th>
+            Data
+           </th>
+           <th>
+            Valor
+           </th>
+          </tr>
+         </thead>
+         <tbody id="expensesTable">
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </section>
+     <section class="page hidden" id="relatoriosPage">
+      <div class="cabecalho-pagina">
+       <div>
+        <div class="subtitulo">
+         Acompanhamento
+        </div>
+        <h1>
+         Relat&oacute;rios
+        </h1>
+        <p>
+         Indicadores para ajudar nas decis&otilde;es do dia a dia.
+        </p>
+       </div>
+       <button class="btn" id="exportCsv">
+        ⇩ Exportar estoque CSV
+       </button>
+      </div>
+      <div class="resumos">
+       <div class="stat">
+        <div class="resumo-topo">
+         Pe&ccedil;as cadastradas
+        </div>
+        <div class="resumo-valor" id="reportProducts">
+         8
+        </div>
+        <div class="resumo-rodape">
+         Tipos de produto no cat&aacute;logo
+        </div>
+       </div>
+       <div class="stat">
+        <div class="resumo-topo">
+         Pe&ccedil;as dispon&iacute;veis
+        </div>
+        <div class="resumo-valor" id="reportStock">
+         248
+        </div>
+        <div class="resumo-rodape">
+         Soma das quantidades em estoque
+        </div>
+       </div>
+       <div class="stat">
+        <div class="resumo-topo">
+         Itens com estoque baixo
+        </div>
+        <div class="resumo-valor" id="reportLow">
+         5
+        </div>
+        <div class="resumo-rodape">
+         Quantidade igual ou menor que 3
+        </div>
+       </div>
+       <div class="stat">
+        <div class="resumo-topo">
+         Valor do estoque
+        </div>
+        <div class="resumo-valor" id="reportValue">
+         R$ 0,00
+        </div>
+        <div class="resumo-rodape">
+         Estimativa pelo pre&ccedil;o de venda
+        </div>
+       </div>
+      </div>
+      <div class="panel">
+       <div class="cabecalho-bloco">
+        <div>
+         <h2>
+          Distribui&ccedil;&atilde;o por categoria
+         </h2>
+         <div class="descricao-bloco">
+          Quantidade de pe&ccedil;as cadastradas em cada categoria
+         </div>
+        </div>
+       </div>
+       <div id="categoryReport" style="display:grid;gap:17px">
+       </div>
+      </div>
+     </section>
+     <section class="page hidden" id="configuracoesPage">
+      <div class="cabecalho-pagina">
+       <div>
+        <div class="subtitulo">
+         Prefer&ecirc;ncias
+        </div>
+        <h1>
+         Configura&ccedil;&otilde;es
+        </h1>
+        <p>
+         Informa&ccedil;&otilde;es b&aacute;sicas do painel interno.
+        </p>
+       </div>
+      </div>
+      <div class="panel" style="max-width:650px">
+       <h2>
+        Dados da empresa
+       </h2>
+       <p class="descricao-bloco" style="margin-bottom:22px">
+        Personalize as informa&ccedil;&otilde;es exibidas no painel.
+       </p>
+       <form class="form-grid" id="settingsForm">
+        <div class="field full">
+         <label for="companyName">
+          Nome da empresa
+         </label>
+         <input id="companyName" required="" value="Brech&oacute; Reyana"/>
+        </div>
+        <div class="field">
+         <label for="currency">
+          Moeda
+         </label>
+         <select id="currency">
+          <option>
+           Real brasileiro (BRL)
+          </option>
+         </select>
+        </div>
+        <div class="field">
+         <label for="theme">
+          Tema
+         </label>
+         <select id="theme">
+          <option>
+           Bege e marrom
+          </option>
+         </select>
+        </div>
+        <div class="field full">
+         <button class="btn primary" style="justify-content:center" type="submit">
+          Salvar prefer&ecirc;ncias
+         </button>
+        </div>
+       </form>
+      </div>
+     </section>
+     <div class="rodape">
+      BRECH&Oacute; REYANA &middot; PAINEL INTERNO
+     </div>
+    </div>
+   </main>
+  </div>
+  <div class="fundo-modal hidden" id="modalBackdrop">
+   <div aria-labelledby="modalTitle" aria-modal="true" class="modal" role="dialog">
+    <h2 id="modalTitle">
+     Cadastrar pe&ccedil;a
+    </h2>
+    <p id="modalDescription">
+     Preencha as informa&ccedil;&otilde;es do produto.
+    </p>
+    <form id="modalForm">
+     <div class="form-grid" id="modalFields">
+     </div>
+     <div class="acoes-modal">
+      <button class="btn" id="cancelModal" type="button">
+       Cancelar
+      </button>
+      <button class="btn primary" id="submitModal" type="submit">
+       Salvar
+      </button>
+     </div>
+    </form>
+   </div>
+  </div>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
