@@ -15,22 +15,11 @@ let tipoModal = "";
 // Produtos cadastrados
 let produtos = [
     { id: 101, nome: "Blusa de linho", categoria: "Blusas", tamanho: "M", preco: 39.90, quantidade: 18 },
-    { id: 102, nome: "Calça jeans reta", categoria: "Calças", tamanho: "38", preco: 59.90, quantidade: 3 },
-    { id: 103, nome: "Vestido floral", categoria: "Vestidos", tamanho: "P", preco: 74.90, quantidade: 12 },
-    { id: 104, nome: "Jaqueta vintage", categoria: "Casacos", tamanho: "G", preco: 89.90, quantidade: 2 },
-    { id: 105, nome: "Camisa oversized", categoria: "Blusas", tamanho: "G", preco: 44.90, quantidade: 26 },
-    { id: 106, nome: "Saia plissada", categoria: "Vestidos", tamanho: "M", preco: 49.90, quantidade: 1 },
-    { id: 107, nome: "Tênis casual", categoria: "Calçados", tamanho: "37", preco: 69.90, quantidade: 8 },
-    { id: 108, nome: "Bolsa tiracolo", categoria: "Acessórios", tamanho: "Único", preco: 54.90, quantidade: 3 }
 ];
 
 // Vendas de exemplo
 let vendas = [
     { data: "22/10/2026", nome: "Blusa de linho", quantidade: 1, pagamento: "Pix", total: 39.90 },
-    { data: "22/10/2026", nome: "Calça jeans reta", quantidade: 1, pagamento: "Cartão", total: 59.90 },
-    { data: "22/10/2026", nome: "Bolsa tiracolo", quantidade: 1, pagamento: "Dinheiro", total: 54.90 },
-    { data: "21/10/2026", nome: "Vestido floral", quantidade: 1, pagamento: "Pix", total: 74.90 },
-    { data: "20/10/2026", nome: "Camisa oversized", quantidade: 2, pagamento: "Cartão", total: 89.80 }
 ];
 
 // Despesas de exemplo

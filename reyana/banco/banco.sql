@@ -20,7 +20,10 @@ CREATE TABLE Cliente (
 
 CREATE TABLE Produto (
     id_produto INT AUTO_INCREMENT PRIMARY KEY,
+    nome_produto VARCHAR(100) NOT NULL,
     descricao VARCHAR(100) NOT NULL,
+    tamanho VARCHAR(5) NOT NULL,
+    quantidade INT NOT NULL,
     preco_compra DECIMAL(10,2) NOT NULL,
     preco_venda DECIMAL(10,2) NOT NULL
 );

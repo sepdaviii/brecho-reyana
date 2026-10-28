@@ -298,6 +298,7 @@
          </div>
         </div>
         <div style="display:grid;gap:10px">
+
          <button class="btn" data-goto="estoque" style="justify-content:flex-start;padding:14px">
           ＋
           <span>
@@ -352,7 +353,7 @@
         </p>
        </div>
        <button class="btn primary" id="addProduct">
-        ＋ Cadastrar pe&ccedil;a
+        ＋ Cadastrar peça
        </button>
       </div>
       <div class="resumos-pequenos">
