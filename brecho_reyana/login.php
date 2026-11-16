@@ -16,6 +16,16 @@
 
         <form id="formLogin">
             <div class="campo-login">
+                <label for="nome">Nome</label>
+                <input
+                    type="nome"
+                    id="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+            </div>
+
+            <div class="campo-login">
                 <label for="email">E-mail</label>
                 <input
                     type="email"

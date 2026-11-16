@@ -724,7 +724,7 @@ tbody tr:last-child td {
     width: 100%;
     max-width: 400px;
     padding: 35px;
-    background: #fffdf9;
+    background: #795545e4;
     border: 1px solid #e9dfd5;
     border-radius: 16px;
     box-shadow: 0 8px 28px #4a30200b;
@@ -737,9 +737,9 @@ tbody tr:last-child td {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #795747;
+    border: 1px solid var(--accent);
     border-radius: 50%;
-    color: #795747;
+    color: var(--accent);
     font: 32px Georgia, serif;
 }
 
@@ -753,7 +753,7 @@ tbody tr:last-child td {
 .subtitulo-login {
     margin: 10px 0 28px;
     text-align: center;
-    color: #89796f;
+    color: white;
     font-size: 14px;
 }
 
@@ -789,14 +789,14 @@ tbody tr:last-child td {
     margin-top: 8px;
     border: none;
     border-radius: 8px;
-    background: #795747;
+    background: var(--accent);
     color: white;
     font-weight: 600;
     cursor: pointer;
 }
 
 .botao-login:hover {
-    background: #5d4033;
+    background: var(--accent);
 }
 
 #mensagemErro {
@@ -807,6 +807,6 @@ tbody tr:last-child td {
 .texto-rodape {
     margin: 25px 0 0;
     text-align: center;
-    color: #89796f;
+    color: white;
     font-size: 11px;
 }
