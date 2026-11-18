@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,40 +17,33 @@
         <h1>Brechó Reyana</h1>
         <p class="subtitulo-login">Acesse o painel da empresa</p>
 
-<form action="login.php" method="POST">
+        <form action="login.php" method="POST">
 
-    <div class="campo-login">
-        <label for="email">E-mail</label>
-        <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Digite seu e-mail"
-            required
-        >
-    </div>
+            <div class="campo-login">
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+            </div>
 
-    <div class="campo-login">
-        <label for="senha">Senha</label>
-        <input
-            type="password"
-            id="senha"
-            name="senha"
-            placeholder="Digite sua senha"
-            required
-        >
-    </div>
+            <div class="campo-login">
+                <label for="senha">Senha</label>
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+            </div>
 
-    <p id="mensagemErro"></p>
-
-    <button type="submit">Entrar</button>
-
-</form>
             <p id="mensagemErro"></p>
 
-<button type="submit">
-    Entrar
-</button>
+            <button type="submit">Entrar</button>
 
         </form>
 
