@@ -1,60 +1,37 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Brechó Reyana</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="pagina-login">
+<?php
+session_start();
 
-    <div class="login-container">
-        <div class="logo-login">R</div>
+require_once "conexao.php";
 
-        <h1>Brechó Reyana</h1>
-        <p class="subtitulo-login">Acesse o painel da empresa</p>
+$email = $_POST['email'] ?? '';
+$senha = $_POST['senha'] ?? '';
 
-        <form id="formLogin">
-            <div class="campo-login">
-                <label for="nome">Nome</label>
-                <input
-                    type="nome"
-                    id="nome"
-                    placeholder="Digite seu nome"
-                    required
-                >
-            </div>
+$sql = "SELECT * FROM usuarios WHERE email = :email";
 
-            <div class="campo-login">
-                <label for="email">E-mail</label>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Digite seu e-mail"
-                    required
-                >
-            </div>
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['email' => $email]);
 
-            <div class="campo-login">
-                <label for="senha">Senha</label>
-                <input
-                    type="password"
-                    id="senha"
-                    placeholder="Digite sua senha"
-                    required
-                >
-            </div>
+$usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            <p id="mensagemErro"></p>
+if ($usuario && password_verify($senha, $usuario['senha'])) {
 
-<button class="btn primary" onclick="window.location.href='index.html'">
-    Entrar
-</button>
+    $_SESSION['usuario'] = $usuario['nome'];
+    $_SESSION['id'] = $usuario['id'];
 
-        </form>
+    if (
+        $usuario['email'] === 'admin@reyana.com' ||
+        $usuario['email'] === 'socio1@reyana.com' ||
+        $usuario['email'] === 'socio2@reyana.com' ||
+        $usuario['email'] === 'socio3@reyana.com' 
+    ) {
+        header("Location: dashboard.php");
+        exit;
+    } else {
+        header("Location: cliente.php");
+        exit;
+    }
 
-        <p class="texto-rodape">Sistema interno · Brechó Reyana</p>
-    </div>
-
-</body>
-</html>
+} else {
+    echo "E-mail ou senha incorretos!";
+}
+?>
